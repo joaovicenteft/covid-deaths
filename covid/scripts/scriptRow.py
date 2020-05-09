@@ -16,7 +16,7 @@ def arrayLength(length):
     array = []
     j = 0
     for i in range (0, length):
-        if (i%random.randint(1,10) == 0):
+        if (i%4 == 0):
             array.append(i)
   
     array.pop()
@@ -64,25 +64,3 @@ plt.plot(dataX_scaleFactor[0], dataY_scaleFactor[0])
 
 
 plt.show()
-'''
-getCovidData()
-
-dataX_exp = []
-dataY_exp = []
-
-N = len(dataY[0])
-
-dataX_exp = np.linspace(6, 40, N)
-
-dataY_exp = arrayToExp(dataY[0])
-
-print(dataX[0])
-print(dataY_exp)
-
-plt.plot(dataX_exp, dataY_exp)
-
-#plt.xlabel('Dias (24h)')
-#plt.ylabel('Mortes por covid-19')
-
-plt.show()
-'''
