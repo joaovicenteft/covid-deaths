@@ -12,6 +12,7 @@ dataY = []
 dataY_scaleFactor = []
 dataX_scaleFactor = []
 
+# add some multiple of one array to another (append natural numbers)
 def arrayLength(length):
     array = []
     j = 0
@@ -22,6 +23,7 @@ def arrayLength(length):
     array.pop()
     return array
 
+#add some multiple of one array to another (append the array number equivalent to multiple)
 def brokeTenStrings(array):
     brokenArray = []
     for i in range(0, len(array)):
@@ -29,12 +31,13 @@ def brokeTenStrings(array):
             brokenArray.append(array[i])
     return brokenArray
 
+
 def getCovidDataScale():
 
     brokenTenStringsA = []
 
     for row in csv_f:
-        if (row[1] == 'Brazil'):
+        if (row[1] == 'Italy'):
             brokenTenStringsA = brokeTenStrings(row[4:len(row)])
             dataY_scaleFactor.append(brokenTenStringsA)
             dataX_scaleFactor.append(arrayLength(len(row)))
